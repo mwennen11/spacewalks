@@ -1,7 +1,7 @@
 # https://data.nasa.gov/resource/eva.json (with modifications)
-data_f = open('/home/sarah/Projects/astronaut-analysis/data.json', 'r')
-data_t = open('/home/sarah/Projects/astronaut-analysis/data.csv','w')
-g_file = 'myplot.png'
+data_f = open('C:\Users\P067080\workshop_build_better_rs_2026\spacewalks\eva-data.json', 'r')
+data_t = open('C:\Users\P067080\workshop_build_better_rs_2026\spacewalks\eva-data.csv','w')
+g_file = 'cumulative_eva_graph.png'
 
 fieldnames = ("EVA #", "Country", "Crew    ", "Vehicle", "Date", "Duration", "Purpose")
 
