@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+import sys
 
 def read_json_to_clean_dataframe(file_name):
     df = pd.read_json(file_name, convert_dates=['date'], encoding='ascii')
@@ -33,9 +34,18 @@ def main(input_file, output_file, graph_file):
     eva_df = compute_durations(eva_df)
     plot_eva_durations(graph_file, eva_df)      
 
-# Data source: https://data.nasa.gov/resource/eva.json (with modifications)
-input_file = './eva-data.json'
-output_file = './eva_data.csv'
-graph_file = './cumulative_eva_graph.png'
+if __name__ == "__main__":
+    
+    if len(sys.argv) >= 3:
+        input_file = sys.argv[1]
+        output_file = sys.argv[2]
+        print("Using custom input and output filenames")
+    else:
+        # Data source: https://data.nasa.gov/resource/eva.json (with modifications)
+        input_file = './eva-data.json'
+        output_file = './eva_data.csv'
+        print("Using default filenames")
 
-main(input_file, output_file, graph_file)
+    graph_file = './cumulative_eva_graph.png'
+
+    main(input_file, output_file, graph_file)
