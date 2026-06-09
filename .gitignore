@@ -1,4 +1,4 @@
-*.csv
-*.png
+results/
+data/
 .DS_Store
 __py_cache__

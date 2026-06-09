@@ -42,10 +42,10 @@ if __name__ == "__main__":
         print("Using custom input and output filenames")
     else:
         # Data source: https://data.nasa.gov/resource/eva.json (with modifications)
-        input_file = './eva-data.json'
-        output_file = './eva_data.csv'
+        input_file = './data/eva-data.json'
+        output_file = './results/eva_data.csv'
         print("Using default filenames")
 
-    graph_file = './cumulative_eva_graph.png'
+    graph_file = './figures/cumulative_eva_graph.png'
 
     main(input_file, output_file, graph_file)
