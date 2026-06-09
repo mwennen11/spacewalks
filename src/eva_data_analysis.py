@@ -11,7 +11,7 @@ def read_json_to_clean_dataframe(file_name):
 
 def text_to_duration(duration):
     hours, minutes = duration.split(":")
-    duration = int(hours) + int(minutes) / 6
+    duration = int(hours) + int(minutes) / 60
     return duration
 
 def compute_durations(df):
